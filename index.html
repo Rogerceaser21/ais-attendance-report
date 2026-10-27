@@ -12,7 +12,7 @@
 <style>
 :root{
   --red:#1F3A68; --ink:#1B2128; --paper:#FFFFFF; --grey:#6E7580;
-  --line:rgba(27,33,40,.10); --tint:#C9A23A; --bar:#B9BEC5;
+  --line:rgba(27,33,40,.10); --tint:#C9A23A; --bar:#B9BEC5; --hl:#C9A23A;
   --m:4vw; --ease:cubic-bezier(.16,.84,.24,1);
   --disp:"Archivo","Arial Narrow","Helvetica Neue",Arial,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
@@ -24,6 +24,7 @@ img{display:block}
 .mono{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;line-height:1.5}
 .disp{font-family:var(--disp);font-stretch:100%;font-weight:400;line-height:1;letter-spacing:-.02em}
 .red{color:var(--red)}
+.hl{color:var(--hl)}
 b{font-weight:inherit}
 .src{text-transform:none;letter-spacing:.04em}
 
@@ -68,21 +69,21 @@ b{font-weight:inherit}
 .cov-r{grid-column:5 / -1;align-self:end;text-align:left}
 .giant{font-family:var(--disp);font-stretch:100%;font-weight:300;line-height:.86;letter-spacing:-.035em;white-space:nowrap;font-variant-numeric:tabular-nums}
 .giant small{font-size:.42em;letter-spacing:0;margin-left:.04em;vertical-align:baseline}
-.cov-r .giant{font-size:min(22vw,34vh);color:var(--red);margin-bottom:14px;margin-left:-.03em}
+.cov-r .giant{font-size:min(22vw,34vh);color:var(--hl);margin-bottom:14px;margin-left:-.03em}
 .cov-r .mono{color:var(--ink)}
 
 /* 02 three years */
 .s-three .body{grid-template-rows:auto 1fr}
 .s-three h2{grid-column:1 / 9;grid-row:1;font-size:min(4.4vw,7.6vh);padding-top:2vh;line-height:1.02;font-weight:300}
 .s-three h2 .sub{display:block;font-size:.46em;font-weight:400;letter-spacing:-.01em;margin-top:2.2vh;color:var(--grey)}
-.s-three h2 em{font-style:normal;color:var(--red);font-weight:500}
+.s-three h2 em{font-style:normal;color:var(--hl);font-weight:500}
 .yrs{display:contents}
 .yr{padding-top:0;padding-left:12px}
 .yr .lab{display:flex;justify-content:space-between;border-top:1px solid var(--ink);padding-top:10px;margin-bottom:2vh}
 .yr .giant{font-size:min(10vw,21vh)}
 .yr .track{position:relative;height:12px;margin:3vh 0 8px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
 .yr .track i{position:absolute;left:0;top:0;bottom:0;background:var(--ink)}
-.yr:last-child .track i{background:var(--red)}
+.yr:last-child .track i{background:var(--hl)}
 .yr .ticks{display:flex;justify-content:space-between;color:var(--grey);font-size:10px}
 .yr .ab{margin-top:2.4vh;font-size:13px}
 .yr .ab b{font-weight:600;color:var(--red)}
@@ -172,7 +173,7 @@ b{font-weight:inherit}
 .pl{grid-column:1 / 7}.pr{grid-column:7 / 13}
 .panel .mono.t{display:flex;justify-content:space-between}
 .panel .hero{display:flex;align-items:flex-end;gap:2.2vw;margin:2vh 0 3vh}
-.panel .hero .giant{font-size:min(12vw,28vh);color:var(--red)}
+.panel .hero .giant{font-size:min(12vw,28vh);color:var(--hl)}
 .panel .hero .from{padding-bottom:1vh}
 .panel .hero .from .mono{color:var(--grey)}
 .panel .hero .from .pct{font-family:var(--disp);font-weight:400;font-size:min(2.8vw,5vh);line-height:.9;display:block;margin:4px 0 2px;color:var(--ink)}
@@ -180,7 +181,7 @@ b{font-weight:inherit}
 .hb2 .trk{position:relative;height:clamp(16px,4vh,34px);border-bottom:1px solid var(--ink);background:
   repeating-linear-gradient(to right,transparent 0,transparent calc(var(--tk) - 1px),var(--line) calc(var(--tk) - 1px),var(--line) var(--tk))}
 .hb2 .trk i{position:absolute;left:0;top:0;bottom:0;background:var(--bar)}
-.hb2.lastyr .trk i{background:var(--red)}
+.hb2.lastyr .trk i{background:var(--hl)}
 .hb2 .n{font-family:var(--disp);font-weight:300;font-size:clamp(26px,4vh,38px);line-height:1;text-align:right;font-variant-numeric:tabular-nums}
 .axis{display:grid;grid-template-columns:70px 1fr 64px;gap:10px;color:var(--grey);font-size:10px}
 .axis div{position:relative;height:14px}
@@ -198,13 +199,13 @@ b{font-weight:inherit}
 .psr .yy{padding-left:12px}
 .psr .yy .disp{font-size:min(2.6vw,4.6vh)}
 .psr .gap{padding-left:12px}
-.psr .gap .disp{font-size:min(2.6vw,4.6vh);color:var(--red);display:block;font-weight:300}
+.psr .gap .disp{font-size:min(2.6vw,4.6vh);color:var(--hl);display:block;font-weight:300}
 .psr .gap .mono{color:var(--grey);font-size:10.5px}
 .pb{display:grid;grid-template-columns:1fr 90px;align-items:center;gap:12px;margin-bottom:10px}
 .pb:last-child{margin-bottom:0}
 .pb .trk{position:relative;height:clamp(14px,3.2vh,28px);background:linear-gradient(to right,var(--line) 1px,transparent 1px) 0 0/calc(100% / 3) 100%;border-bottom:1px solid var(--ink)}
 .pb .trk i{position:absolute;left:0;top:0;bottom:0}
-.pb.p .trk i{background:var(--red)}
+.pb.p .trk i{background:var(--hl)}
 .pb.s .trk i{background:var(--bar)}
 .pb .n{font-family:var(--disp);font-weight:300;font-size:min(2.4vw,4.4vh);white-space:nowrap;line-height:1;text-align:right;font-variant-numeric:tabular-nums}
 .pb .n small{font-size:.5em}
@@ -401,7 +402,7 @@ b{font-weight:inherit}
   <header class="sh"><img class="logo" data-logo="dark" alt="AIS"><span class="mono"><b>07</b>Primary vs Secondary</span></header>
   <div class="body">
     <h2 class="disp rv">Primary vs Secondary</h2>
-    <div class="lg mono rv" style="--d:.15s"><span><i style="background:var(--red)"></i>Primary</span><span><i style="background:var(--bar)"></i>Secondary</span></div>
+    <div class="lg mono rv" style="--d:.15s"><span><i style="background:var(--hl)"></i>Primary</span><span><i style="background:var(--bar)"></i>Secondary</span></div>
     <div class="ps" id="ps"></div>
   </div>
   <div class="foot mono src">Source: iSAMS Export</div>
@@ -506,7 +507,7 @@ $("#threeHead").innerHTML = `Attendance Improvement Over the Past 3 Years<span c
 $("#yrs").innerHTML = D.years.map((y, i) => `
   <article class="yr y${i + 1} rv" style="--d:${.15 + i * .18}s">
     <div class="lab mono"><span>${y.year}</span><span>Attendance</span></div>
-    <div class="giant ${i === 2 ? "red" : ""}">${cnt(y.att, 1, `data-dur="1600" data-delay="${300 + i * 250}"`)}<small>%</small></div>
+    <div class="giant ${i === 2 ? "hl" : ""}">${cnt(y.att, 1, `data-dur="1600" data-delay="${300 + i * 250}"`)}<small>%</small></div>
     <div class="track"><i class="bx" style="width:${(y.att - 85) / 15 * 100}%;--d:${.5 + i * .25}s"></i></div>
     <div class="ticks mono"><span>85</span><span>90</span><span>95</span><span>100</span></div>
     <div class="ab mono">Absence <b>${f1(100 - y.att)}%</b></div>
@@ -586,6 +587,7 @@ const weekTip = w => {
 };
 $("#wlegend").innerHTML = `<span><i style="background:${BAR}"></i>Normal week</span><span><i style="background:${TINT}"></i>Ramadan</span><span><i style="background:${RED}"></i>War / online learning</span><span style="color:var(--grey)">Scale 85 to 100</span>`;
 let weeksW = 0;
+const HL = new URLSearchParams(location.search).get("hl") || "d";  // d = Igor's mustard box (27 Oct); a/b/c/low = the rejected options
 function drawWeeks() {
   const host = $("#weeks"); weeksW = host.clientWidth;
   host.querySelectorAll("svg").forEach(s => s.remove());
@@ -599,7 +601,7 @@ function drawWeeks() {
   const GAP = 3, maxN = Math.max(...Y.map(y => byYear(y).length));
   const lows = D.weeks.filter(w => w.att != null).sort((a, b) => a.att - b.att)[0];
   let bi = 0;
-  const layout = [];
+  const layout = [], top26 = [];
   if (narrow) Y.forEach((y, yi) => layout.push({row: yi, ws: byYear(y), off: 0, n: maxN, label: y}));
   else { let off = 0; Y.forEach(y => { const ws = byYear(y); layout.push({row: 0, ws, off, n: ws.length, label: y}); off += ws.length + GAP; }); }
   const totalSlots = narrow ? maxN : layout.reduce((s, l) => s + l.n, 0) + GAP * (Y.length - 1);
@@ -627,7 +629,8 @@ function drawWeeks() {
         const h = yv(l.row, 85) - yv(l.row, w.att);
         const r = svgEl("rect", {x: bx, y: yv(l.row, w.att), width: bw, height: h, fill: kindCol(w.kind), class: "by"}, svg);
         r.style.setProperty("--d", (.2 + bi * .012) + "s");
-        if (w === lows) {
+        if (l.label === Y[Y.length - 1]) top26.push({w, bx, bw, row: l.row, r});
+        if (HL === "low" && w === lows) {
           const ax = bx + bw / 2, ay = yv(l.row, w.att), top = yv(l.row, 100);
           const a = svgEl("g", {class: "fade", style: "--d:1.9s"}, svg);
           svgEl("line", {x1: ax, x2: ax, y1: ay - 5, y2: top - 8, stroke: RED, "stroke-width": 1.5}, a);
@@ -643,6 +646,38 @@ function drawWeeks() {
       hit.addEventListener("pointerleave", e => { if (e.pointerType === "mouse") tipHide(); });
     });
   });
+  if (HL !== "low" && top26.length) {
+    const HLC = "#C9A23A", hi = Math.max(...top26.map(t => t.w.att));
+    const peaks = top26.filter(t => t.w.att >= hi - (HL === "b" ? .25 : 0));
+    const g = svgEl("g", {class: "fade", style: "--d:1.6s"}, svg);
+    if (HL === "a") {        // mustard cap on the top of each highest week
+      peaks.forEach(t => {
+        const y = yv(t.row, t.w.att);
+        svgEl("rect", {x: t.bx - 1, y: y - 3, width: t.bw + 2, height: 7, fill: HLC}, g);
+      });
+      const p = peaks[peaks.length - 1], y = yv(p.row, p.w.att);
+      svgEl("text", {x: p.bx + p.bw, y: y - 12, "text-anchor": "end", class: "anno", style: `fill:${HLC}`}, g).textContent = `HIGHEST WEEKS ${f1(hi)}%`;
+    }
+    if (HL === "d") {        // Igor's sketch: a mustard box round the tops of the 2026/27 weeks, caps on the peaks, label above
+      const x0 = Math.min(...top26.map(t => t.bx)) - 6, x1 = Math.max(...top26.map(t => t.bx + t.bw)) + 6;
+      const yTop = yv(top26[0].row, Math.min(100, hi + .35)) - 4, yBot = yv(top26[0].row, 97.9);
+      svgEl("rect", {x: x0, y: yTop, width: x1 - x0, height: yBot - yTop, rx: 4, fill: HLC, "fill-opacity": .1, stroke: HLC, "stroke-width": 2.5}, g);
+      peaks.forEach(t => svgEl("rect", {x: t.bx - 1, y: yv(t.row, t.w.att) - 3, width: t.bw + 2, height: 7, fill: HLC}, g));
+      svgEl("text", {x: x1, y: yTop - 9, "text-anchor": "end", class: "anno", style: `fill:${HLC}`}, g).textContent = `HIGHEST WEEKS ${f1(hi)}%`;
+    }
+    if (HL === "b") {        // top weeks filled mustard, value on top
+      peaks.forEach(t => {
+        t.r.setAttribute("fill", HLC);
+        svgEl("text", {x: t.bx + t.bw / 2, y: yv(t.row, t.w.att) - 7, "text-anchor": "middle", class: "anno", style: `fill:${HLC};letter-spacing:0`}, g).textContent = f1(t.w.att);
+      });
+    }
+    if (HL === "c") {        // a high-water line across the chart, dots on the peaks
+      const y = yv(peaks[0].row, hi);
+      svgEl("line", {x1: padL, x2: W, y1: y, y2: y, stroke: HLC, "stroke-width": 1.5, "stroke-dasharray": "5 4"}, g);
+      svgEl("text", {x: padL + 6, y: y - 7, class: "anno", style: `fill:${HLC}`}, g).textContent = `2026/27 HIGH ${f1(hi)}%`;
+      peaks.forEach(t => svgEl("circle", {cx: t.bx + t.bw / 2, cy: yv(t.row, t.w.att), r: 5, fill: "#fff", stroke: HLC, "stroke-width": 2.5}, g));
+    }
+  }
 }
 
 /* ---------- 05 moments ---------- */
